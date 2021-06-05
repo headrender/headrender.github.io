@@ -75,10 +75,13 @@ const toStr = {
 }
 
 mainElem.nbt.addEventListener("paste", onNbtChanged, false);
+mainElem.nbt.addEventListener("input", onNbtChanged, false);
 subElem.nbt.addEventListener("click", onNbtChanged, false);
 mainElem.val.addEventListener("paste", onValChanged, false);
+mainElem.val.addEventListener("input", onValChanged, false);
 subElem.val.addEventListener("click", onValChanged, false);
 mainElem.tid.addEventListener("paste", onTidChanged, false);
+mainElem.tid.addEventListener("input", onTidChanged, false);
 subElem.tid.addEventListener("click", onTidChanged, false);
 
 $('#copy-id').on('click', () => {copyText('#textureID')});
