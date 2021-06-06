@@ -259,4 +259,53 @@ aside img#drawn {
     border-radius: 4px;
     border: 1px solid var(--col-acc);
     background-color: var(--col-bg2);
+footer {
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.4rem 2rem;
+}
+/* social media buttons styling */
+.github-button-wrapper a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    background: var(--col-bg);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px black;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    outline: none;
+}
+.github-button-wrapper a:hover,
+.github-button-wrapper a:focus,
+.github-button-wrapper a:active {
+    width: 200px;
+    background: var(--col-bg3);
+    color: white;
+}
+.github-button-wrapper a .icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 50px;
+    line-height: 40px;
+    transition: all 0.2s ease;
+}
+.github-button-wrapper a .icon i {
+    font-size: 20px;
+    line-height: 40px;
+}
+.github-button-wrapper a span {
+    font-weight: 500;
+    line-height: 40px;
 }
