@@ -21,7 +21,6 @@ fetch('../data/contributors.json')
     $('#contrib-list').html(contribsList);
 });
 function constructSingleContributor(name, list) {
-    console.log(name, list);
     return `<li>
     <div class="tooltip">
         <span>${name}</span>
