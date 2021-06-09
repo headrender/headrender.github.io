@@ -6,48 +6,6 @@ function el(id) {
     return document.getElementById(id);
 }
 
-fetch('../data/contributors.json')
-.then(response => {
-    return response.json()
-})
-.then(jsonFile => {
-    let contribsList = '';
-    for (const key in jsonFile) {
-        if (Object.hasOwnProperty.call(jsonFile, key)) {
-            const value = jsonFile[key];
-            contribsList += constructSingleContributor(key, value);
-        }
-    }
-    $('#contrib-list').html(contribsList);
-});
-function constructSingleContributor(name, list) {
-    return `<li>
-    <div class="tooltip">
-        <span>${name}</span>
-        <span class="tooltiptext">
-            <ul>
-                ${list.map(text => `<li><span>${text}</span></li>`).join("")}
-            </ul>
-        </span>
-    </div>
-</li>`
-}
-
-$('#show-contribs').click(() => {
-    $('#contrib-list-div').toggleClass('hidden-height');
-    if ($('#contrib-list-div').hasClass('hidden-height')) {
-        console.log(0);
-        $('#contrib-list-div').animate({height: 0}, 500);
-    }
-    else {
-        var el = $('#contrib-list-div'),
-        curHeight = el.height(),
-        autoHeight = el.css('height', 'auto').height();
-        console.log(autoHeight);
-        el.height(curHeight).animate({height: autoHeight}, 500);
-    }
-})
-
 var canvas = document.getElementById("canvas");
 canvas.width = 64;
 canvas.height = 16;
