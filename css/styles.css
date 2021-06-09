@@ -36,6 +36,8 @@ body {
     background: var(--col-bg);
     min-height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .hidden {
     display: none;
@@ -148,6 +150,7 @@ header .version {
     display: flex;
     clear: both;
     width: 100%;
+    flex-grow: 1;
 }
 main, aside {
     width: 50%;
@@ -373,6 +376,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 0.4rem 2rem;
+    justify-self: flex-end;
 }
 /* social media buttons styling */
 .github-button-wrapper a {
